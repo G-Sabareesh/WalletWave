@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/* To remove the underline from a */
+a {
+  text-decoration: none;
+}
+/* To remove the style from li */
+li {
+  list-style-type: none;
+}
+body {
+  background-color: black;
+  color: white;
+}
+/* CSS style the header section */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 12%;
+  width: 100%;
+}
+/* CSS style the navigation section */
+nav {
+  background-color: #1d1d1d;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.WW-logo {
+  /* background-color: red; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+/* CSS style the logo and image */
+.WW-logo .logo {
+  position: relative;
+  padding: 5px;
+  margin: 2px;
+  margin-right: 5px;
+}
+.logo a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  height: 55px;
+}
+/* CSS style the logo name */
+.WW-logo .name {
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 5px;
+}
+/* CSS style hte navigation tabs */
+nav .nav-tabs {
+  /* background-color: red; */
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+.nav-tabs ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.nav-tabs ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 55%;
+  width: 20%;
+}
+.nav-tabs a {
+  background-color: #363636;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 20%/50%;
+}
+.nav-tabs a span {
+  text-align: center;
+  font-size: medium;
+  color: white;
+  font-weight: 500;
+}
+/* CSS style the user logo */
+nav .user-logo {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 100%;
+  padding: 2px;
+}
+.user-logo .user {
+  text-align: center;
+  border-radius: 50%;
+}
+.user i {
+  font-size: 55px;
+}
+/* Navigation Tab active */
+.nav-tabs a.active {
+  background-color: #6e52fb;
+}
+/* CSS style to the main contanier */
+main {
+  height: 100vh;
+  width: 100%;
+}
+section {
+  background-color: #545454;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+section:nth-child(even) {
+  background-color: red;
+}
