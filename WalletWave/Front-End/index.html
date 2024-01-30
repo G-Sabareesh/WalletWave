@@ -22,14 +22,11 @@
     />
   </head>
   <body>
-    <!-- header section -->
-    <header>
-      <!-- navigation section -->
+    <div class="nav-bar">
       <nav>
-        <!-- logo and name -->
         <div class="WW-logo">
           <div class="logo">
-            <a href="#">
+            <a href="index.html">
               <img src="../images/expense-circle.png" alt="WW-LOGO" />
             </a>
           </div>
@@ -37,44 +34,159 @@
             <span>Wallet Wave</span>
           </div>
         </div>
-        <!-- Tabs -->
         <div class="nav-tabs">
           <ul>
             <li>
-              <a href="#home" class="active" data-id="home"
+              <a href="#home" class="active-tab" data-id="home"
                 ><span class="tab">Home</span></a
               >
             </li>
             <li>
-              <a href="#transaction"
-                ><span class="tab" data-id="transaction">Transaction</span></a
+              <a href="#transaction" data-id="transaction"
+                ><span class="tab">Transaction</span></a
               >
             </li>
             <li>
-              <a href="#report"
-                ><span class="tab" data-id="report">Report</span></a
+              <a href="#report" data-id="report"
+                ><span class="tab">Report</span></a
               >
             </li>
             <li>
-              <a href="#aboutus"
-                ><span class="tab" data-id="aboutus">About Us</span></a
+              <a href="#aboutus" data-id="aboutus"
+                ><span class="tab">About Us</span></a
               >
             </li>
           </ul>
         </div>
-        <!-- User Logo -->
         <div class="user-logo">
           <div class="user">
             <i class="fa-regular fa-circle-user"></i>
           </div>
         </div>
       </nav>
-    </header>
+    </div>
     <main>
-      <section id="home" class="container"><h1>Home</h1></section>
+      <section id="home" class="container active-page">
+        <div class="whole-container">
+          <div class="signup-container">
+            <div class="title-container">
+              <span>Welcome to Wallet Wave</span>
+            </div>
+            <div class="main-container">
+              <div class="first-container">
+                <div class="paragraph">
+                  <span>
+                    WalletWave is your ultimate financial companion, providing a
+                    sleek and user-friendly platform for effortless expense
+                    tracking. With a dynamic dashboard offering quick financial
+                    snapshots, intuitive transaction management, and insightful
+                    reports, WalletWave empowers users to take control of their
+                    finances.<br />Thanks for choosing Wallet Wave
+                  </span>
+                </div>
+              </div>
+              <div class="second-container">
+                <div class="toggle-switch">
+                  <div class="login switch">
+                    <span>Login</span>
+                  </div>
+                  <div class="sigup switch"><span>Signup</span></div>
+                </div>
+                <form id="signupForm">
+                  <div class="form-field">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="name"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      placeholder="email"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="password"
+                      required
+                    />
+                  </div>
+                  <div class="form-field form-button">
+                    <button type="button" onclick="signup()">Signup</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="login-container">
+            <div class="title-container">
+              <span>Welcome back to Wallet Wave</span>
+            </div>
+            <div class="main-container">
+              <div class="first-container">
+                <div class="paragraph">
+                  <span>
+                    Welcome back to WalletWave! We're thrilled to have you back
+                    on board. Thank you for choosing WalletWave as your
+                    financial companion. Your trust means the world to us!
+                    <br />
+                    Thanks for being a part of the WalletWave community. Happy
+                    tracking!
+                    <br />The WalletWave Team 🚀
+                  </span>
+                </div>
+              </div>
+              <div class="second-container">
+                <div class="toggle-switch">
+                  <div class="login switch">
+                    <span>Login</span>
+                  </div>
+                  <div class="sigup switch"><span>Signup</span></div>
+                </div>
+                <form id="loginForm">
+                  <div class="form-field">
+                    <input
+                      type="text"
+                      id="username"
+                      name="username"
+                      placeholder="username/email"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="password"
+                      required
+                    />
+                  </div>
+                  <div class="form-field form-button">
+                    <button type="button" onclick="login()">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="transaction" class="container"><h1>Transaction</h1></section>
       <section id="report" class="container"><h1>Report</h1></section>
       <section id="aboutus" class="container"><h1>About us</h1></section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
