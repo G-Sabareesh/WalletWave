@@ -4,35 +4,33 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-/* To remove the underline from a */
 a {
   text-decoration: none;
 }
-/* To remove the style from li */
 li {
   list-style-type: none;
 }
 body {
   background-color: black;
   color: white;
+  overflow: hidden;
 }
-/* CSS style the header section */
-header {
+.nav-bar {
+  background-color: #1d1d1d;
   position: fixed;
   top: 0;
   left: 0;
-  height: 12%;
   width: 100%;
+  height: 12%;
+  z-index: 3;
 }
-/* CSS style the navigation section */
 nav {
-  background-color: #1d1d1d;
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
   height: 100%;
+  width: 100%;
 }
 .WW-logo {
   /* background-color: red; */
@@ -68,16 +66,19 @@ nav {
 }
 /* CSS style hte navigation tabs */
 nav .nav-tabs {
-  /* background-color: red; */
   position: relative;
-  height: 100%;
+  display: flex;
+  height: 65%;
   width: 50%;
 }
 .nav-tabs ul {
+  /* background-color: yellow; */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
+  width: 100%;
 }
 .nav-tabs ul li {
   position: relative;
@@ -85,7 +86,7 @@ nav .nav-tabs {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 55%;
+  height: 100%;
   width: 20%;
 }
 .nav-tabs a {
@@ -96,7 +97,7 @@ nav .nav-tabs {
   justify-content: center;
   height: 100%;
   width: 100%;
-  border-radius: 20%/50%;
+  border-radius: 50px;
 }
 .nav-tabs a span {
   text-align: center;
@@ -121,23 +122,172 @@ nav .user-logo {
 .user i {
   font-size: 55px;
 }
-/* Navigation Tab active */
-.nav-tabs a.active {
+.nav-tabs a.active-tab {
   background-color: #6e52fb;
 }
-/* CSS style to the main contanier */
-main {
+section {
+  background-color: rgb(71, 69, 69);
+  position: relative;
+  min-height: 100vh;
+  justify-content: center;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  /* transition: all 2s ease-in-out; */
+  overflow: hidden;
+}
+section.active-page {
+  display: flex;
+}
+main #home {
+  /* background-color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
 }
-section {
-  background-color: #545454;
+.whole-container {
+  /* background-color: green; */
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
 }
-section:nth-child(even) {
-  background-color: red;
+#home .whole-container .signup-container {
+  /* background-color: violet; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  height: 85%;
+  width: 100%;
+  padding: 10px;
+}
+#home .whole-container .login-container {
+  /* background-color: violet; */
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  height: 85%;
+  width: 100%;
+  padding: 10px;
+}
+.signup-container .title-container,
+.login-container .title-container {
+  /* background-color: black; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+.signup-container .title-container span,
+.login-container .title-container span {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.signup-container .main-container,
+.login-container .main-container {
+  /* background-color: yellow; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  height: 100%;
+  margin: 10px;
+}
+.main-container .first-container {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 50%;
+}
+.first-container .paragraph {
+  padding: 5px;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: justify;
+  line-height: 1.5;
+}
+.main-container .second-container {
+  /* background-color: red; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  width: 30%;
+}
+.main-container .second-container .toggle-switch {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 5px;
+  margin-block: 5px;
+}
+.main-container .second-container .toggle-switch span {
+  font-size: medium;
+  font-weight: 500;
+  text-align: center;
+}
+.main-container .second-container .toggle-switch .switch {
+  /* background: violet; */
+  margin-inline: 2px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.main-container .second-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+}
+.main-container .second-container form .form-field {
+  /* background-color: green; */
+  margin: 10px;
+  padding: 5px;
+}
+.main-container .second-container form .form-field input {
+  padding: 2px;
+  text-indent: 5%;
+  outline: none;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 400;
+}
+.main-container .second-container form .form-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.main-container .second-container form .form-field button {
+  padding: 5px;
+  text-indent: 5%;
+  text-align: center;
+  outline: none;
+  font-size: medium;
+  font-weight: 400;
+  width: 100%;
 }
