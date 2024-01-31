@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Wallet Wave" />
+    <meta
+      property="og:description"
+      content="Track expenses effortlessly and take control of your finances with intuitive tools and insightful reports."
+    />
+    <meta property="og:image" content="../images/expense.png" />
+
     <title>Wallet Wave</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="../images/expense-circle.png" type="png" />
@@ -27,7 +34,10 @@
         <div class="WW-logo">
           <div class="logo">
             <a href="index.html">
-              <img src="../images/expense-circle.png" alt="WW-LOGO" />
+              <img
+                src="https://raw.githubusercontent.com/G-Sabareesh/WalletWave/main/WalletWave/images/expense-circle.png"
+                alt="WW-LOGO"
+              />
             </a>
           </div>
           <div class="name">
@@ -81,7 +91,7 @@
                     tracking. With a dynamic dashboard offering quick financial
                     snapshots, intuitive transaction management, and insightful
                     reports, WalletWave empowers users to take control of their
-                    finances.<br />Thanks for choosing Wallet Wave
+                    finances.<br /><br />Thanks for choosing Wallet Wave
                   </span>
                 </div>
               </div>
@@ -90,9 +100,9 @@
                   <div class="login switch">
                     <span>Login</span>
                   </div>
-                  <div class="sigup switch"><span>Signup</span></div>
+                  <div class="signup switch active"><span>Signup</span></div>
                 </div>
-                <form id="signupForm">
+                <form id="signupForm" class="userForm">
                   <div class="form-field">
                     <input
                       type="text"
@@ -129,7 +139,7 @@
               </div>
             </div>
           </div>
-          <div class="login-container">
+          <div class="login-container active">
             <div class="title-container">
               <span>Welcome back to Wallet Wave</span>
             </div>
@@ -141,6 +151,7 @@
                     on board. Thank you for choosing WalletWave as your
                     financial companion. Your trust means the world to us!
                     <br />
+                    <br />
                     Thanks for being a part of the WalletWave community. Happy
                     tracking!
                     <br />The WalletWave Team 🚀
@@ -149,16 +160,16 @@
               </div>
               <div class="second-container">
                 <div class="toggle-switch">
-                  <div class="login switch">
+                  <div class="login switch active">
                     <span>Login</span>
                   </div>
-                  <div class="sigup switch"><span>Signup</span></div>
+                  <div class="signup switch"><span>Signup</span></div>
                 </div>
-                <form id="loginForm">
+                <form id="loginForm" class="userForm">
                   <div class="form-field">
                     <input
                       type="text"
-                      id="username"
+                      id="log-username"
                       name="username"
                       placeholder="username/email"
                       autocomplete="off"
@@ -168,7 +179,7 @@
                   <div class="form-field">
                     <input
                       type="password"
-                      id="password"
+                      id="log-password"
                       name="password"
                       placeholder="password"
                       required
