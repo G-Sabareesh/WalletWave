@@ -161,7 +161,7 @@ main #home {
 #home .whole-container .signup-container {
   /* background-color: violet; */
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -182,6 +182,11 @@ main #home {
   width: 100%;
   padding: 10px;
 }
+#home .whole-container .signup-container.active,
+#home .whole-container .login-container.active {
+  display: flex;
+}
+
 .signup-container .title-container,
 .login-container .title-container {
   /* background-color: black; */
@@ -215,6 +220,8 @@ main #home {
   justify-content: center;
   height: fit-content;
   width: 50%;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .first-container .paragraph {
   padding: 5px;
@@ -232,6 +239,8 @@ main #home {
   flex-direction: column;
   height: fit-content;
   width: 30%;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .main-container .second-container .toggle-switch {
   /* background-color: green; */
@@ -246,34 +255,50 @@ main #home {
   font-size: medium;
   font-weight: 500;
   text-align: center;
+  /* background-color: violet; */
 }
 .main-container .second-container .toggle-switch .switch {
-  /* background: violet; */
   margin-inline: 2px;
   padding: 10px;
   border-radius: 50px;
+  /* background-color: violet; */
+  cursor: pointer;
 }
-
+.main-container .second-container .toggle-switch .switch:hover {
+  background-color: rgba(119, 92, 255, 0.558);
+}
+.main-container .second-container .toggle-switch .switch.active {
+  background-color: #6e52fb;
+}
 .main-container .second-container form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* height: 100%; */
+}
+.main-container .second-container .userForm {
+  /* background-color: red; */
   height: 100%;
-  padding: 10px;
+  width: 80%;
+  margin: 10px;
 }
 .main-container .second-container form .form-field {
   /* background-color: green; */
   margin: 10px;
   padding: 5px;
+  width: 100%;
 }
 .main-container .second-container form .form-field input {
-  padding: 2px;
+  padding: 4px;
   text-indent: 5%;
-  outline: none;
   font-size: medium;
   font-style: italic;
   font-weight: 400;
+  border-radius: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
 }
 .main-container .second-container form .form-button {
   position: relative;
@@ -283,6 +308,7 @@ main #home {
   width: 50%;
 }
 .main-container .second-container form .form-field button {
+  color: white;
   padding: 5px;
   text-indent: 5%;
   text-align: center;
@@ -290,4 +316,6 @@ main #home {
   font-size: medium;
   font-weight: 400;
   width: 100%;
+  background-color: #6e52fb;
+  outline: none;
 }
