@@ -22,7 +22,7 @@ body {
   left: 0;
   width: 100%;
   height: 12%;
-  z-index: 3;
+  z-index: 4;
 }
 nav {
   position: relative;
@@ -118,12 +118,47 @@ nav .user-logo {
 .user-logo .user {
   text-align: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 .user i {
   font-size: 55px;
 }
 .nav-tabs a.active-tab {
   background-color: #6e52fb;
+}
+.nav-tabs a:hover {
+  background-color: rgba(119, 92, 255, 0.558);
+}
+.pop-up-message {
+  /* background-color: red; */
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+.pop-up-message .success-message {
+  background-color: rgb(28, 184, 28);
+  position: absolute;
+  text-align: center;
+  top: 15%;
+  padding: 10px 10px 10px 5px;
+  border-radius: 50px;
+}
+.pop-up-message .success-message .i {
+  /* background-color: green; */
+  text-align: center;
+  font-size: larger;
+  padding: 10px 3px 10px 10px;
+}
+.pop-up-message .success-message .text-message {
+  /* background-color: green; */
+  text-align: center;
+  font-size: large;
+  font-weight: 500;
+  padding: 10px 10px 10px 3px;
 }
 section {
   background-color: rgb(71, 69, 69);
@@ -194,12 +229,14 @@ main #home {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
 }
 .signup-container .title-container span,
 .login-container .title-container span {
-  font-size: xx-large;
+  /* background-color: #6e52fb; */
+  padding: 5px;
+  font-size: 40px;
   font-weight: bolder;
 }
 .signup-container .main-container,
@@ -221,7 +258,8 @@ main #home {
   height: fit-content;
   width: 50%;
   padding: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  border-radius: 5px;
 }
 .first-container .paragraph {
   padding: 5px;
@@ -240,7 +278,8 @@ main #home {
   height: fit-content;
   width: 30%;
   padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  border-radius: 5px;
 }
 .main-container .second-container .toggle-switch {
   /* background-color: green; */
@@ -285,26 +324,35 @@ main #home {
 }
 .main-container .second-container form .form-field {
   /* background-color: green; */
-  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
   padding: 5px;
   width: 100%;
 }
 .main-container .second-container form .form-field input {
-  padding: 4px;
+  color: #363636;
+  padding: 8px;
   text-indent: 5%;
   font-size: medium;
-  font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
   border-radius: 50px;
-  width: 100%;
+  width: 80%;
   outline: none;
   border: none;
+}
+.main-container .second-container form .form-field input:active,
+.main-container .second-container form .form-field input:focus {
+  outline: 3px solid #6e52fb;
+  outline-offset: 1.5px;
 }
 .main-container .second-container form .form-button {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
   width: 50%;
 }
 .main-container .second-container form .form-field button {
@@ -312,10 +360,19 @@ main #home {
   padding: 5px;
   text-indent: 5%;
   text-align: center;
-  outline: none;
   font-size: medium;
   font-weight: 400;
   width: 100%;
   background-color: #6e52fb;
-  outline: none;
+  border-radius: 50px;
+  border: none;
+  outline: 2px solid rgba(119, 92, 255, 0.558);
+  outline-offset: 2px;
+}
+.main-container .second-container form .form-field button:hover {
+  background-color: rgba(119, 92, 255, 0.558);
+  outline: 0px;
+}
+.main-container .second-container form .form-field button:hover {
+  scale: 1.1;
 }
