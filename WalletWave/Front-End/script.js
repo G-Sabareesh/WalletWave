@@ -22,14 +22,6 @@
         // console.log(click_switch)
         // get the clicked switch using this
         click_switch.addEventListener("click", function () {
-            // let parent = this.parentNode;
-            // while (parent) {
-            //     if (parent.classList.contains("login-container") || parent.classList.contains("signup-container")) {
-            //         console.log(parent);
-            //         break;
-            //     }
-            //     parent = parent.parentNode;
-            // }
             console.log(this);
             // if the class name contain signup show the singup same as login
             if (this.classList.contains("signup")) {
@@ -50,51 +42,33 @@
 // Function to handle login
 function login() {
     console.log("login");
-    document.querySelector(".login-container").classList.remove("active");
     // Get form data
-    // const formData = new FormData(document.getElementById('loginForm'));
-
-    // // Send login request to login.php
-    // fetch('login.php', {
-    //     method: 'POST',
-    //     body: formData
-    // })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         // Check login response
-    //         if (data.success) {
-    //             // Login successful, display success message or redirect to dashboard
-    //             console.log('Login successful!');
-    //         } else {
-    //             // Login failed, display error message
-    //             console.error(data.message);
-    //         }
-    //     })
-    //     .catch(error => console.error('Error:', error));
+    const formData = new FormData(document.getElementById('loginForm'));
+    for (const [key, value] of formData) {
+        console.log('»', key, value)
+    }
+    // hide the loginpage
+    document.querySelector(".login-container").classList.remove("active");
+    popUpmessage("Login Successfully");
 }
 
 // Function to handle signup
 function signup() {
     console.log("signup");
-    document.querySelector(".signup-container").classList.remove("active");
     // Get form data
-    // const formData = new FormData(document.getElementById('signupForm'));
+    const formData = new FormData(document.getElementById('signupForm'));
+    for (const [key, value] of formData) {
+        console.log('»', key, value)
+    }
+    // hide the signup page
+    document.querySelector(".signup-container").classList.remove("active");
+    popUpmessage("Your Account Created Successfully");
+}
 
-    // // Send signup request to signup.php
-    // fetch('signup.php', {
-    //     method: 'POST',
-    //     body: formData
-    // })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         // Check signup response
-    //         if (data.success) {
-    //             // Signup successful, display success message or redirect to login page
-    //             console.log('Signup successful!');
-    //         } else {
-    //             // Signup failed, display error message
-    //             console.error(data.message);
-    //         }
-    //     })
-    //     .catch(error => console.error('Error:', error));
+function popUpmessage(message) {
+    document.querySelector("main .pop-up-message").style.display = "flex";
+    document.querySelector(".pop-up-message .success-message .text-message").textContent = message;
+    setTimeout(() => {
+        document.querySelector("main .pop-up-message").style.display = "none";
+    }, 5000);
 }
