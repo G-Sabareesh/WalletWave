@@ -1,0 +1,119 @@
+#logout{
+    background-color: transparent;
+ position: absolute;
+ /* display: flex; */
+ align-items: center;
+ justify-content: center;
+ top: 13%;
+ min-height: 10% !important;
+ width: 100%;
+ z-index: 3;
+}
+.logout-content{
+   background-color: #474545;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: 100%;
+   width: 42%;
+   padding: 5px;
+   border-radius: 20px;
+ box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+}
+.logout-first{
+   /* background-color: yellow; */
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-direction: row;
+   width: 90%;
+   padding: 5px;
+}
+.logout-first .logout-img{
+   /* background-color: black; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+   width: 25%;
+}
+.user-logo-img{
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50px;
+}
+.logout-first img{
+   outline: 3px solid var(--main-color);
+   offset: 2px;
+   /* position: relative; */
+   height: 105px;
+   width: 105px;
+   padding: 5px;
+}
+.logout-user{
+   /* background-color: black; */
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   height: 100%;
+   width: 72%;
+   padding: 5px;
+}
+.logout-username{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+.logout-username span{
+   /* background-color: blue; */
+   width: 80%;
+   padding: 3px;
+}
+#userName{
+   font-size: large;
+   font-weight: 600;
+}
+#userID{
+   color: rgb(201, 190, 190);
+   font-size: medium;
+   text-indent: 1px;
+   font-weight: 500;
+}
+.logout-second{
+   /* background-color: blue; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 90%;
+   /* margin: 2px; */
+   padding: 5px;
+}
+.logout-text{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 60%;
+}
+.logout-button{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-direction: row;
+   width: 40%;
+}
+#logout-confirm, #logout-cancel{
+   background-color: transparent;
+   color: white;
+   font-size: medium;
+   padding: 7px;
+   border: 1px solid var(--main-color);
+   border-radius: 5px;
+   outline: none;
+   cursor: pointer;
+}
+#logout-confirm:hover, #logout-cancel:hover{
+   background-color: var(--main-color);
+}

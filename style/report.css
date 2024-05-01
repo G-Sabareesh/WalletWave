@@ -1,0 +1,185 @@
+#report {
+    /* background-color: green; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .whole-report {
+    /* background-color: red; */
+    /* display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%; */
+    /* background-color: red; */
+    position: absolute;
+    display: flex;
+    top: 5%;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+  .whole-report-container {
+    /* background: blue; */
+    height: 80%;
+    width: 95%;
+  }
+  .report-first {
+    background-color: #474545;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20%;
+    margin-bottom: 3px;
+    box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  }
+  .report-search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 80%;
+  }
+  .report-second {
+    background-color: #474545;
+    height: 80%;
+    box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  }
+  .report-table {
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  .report-title {
+    margin-bottom: 8px;
+  }
+  .report-title span {
+    /* background-color: green; */
+    margin: 5px;
+    font-size: x-large;
+    font-weight: 700;
+  }
+  .reportTable {
+    /* background-color: green; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-inline: 20px;
+    height: 80%;
+    width: 100%;
+    padding: 5px;
+    overflow-y: auto;
+  }
+  #report table {
+    /* background-color: violet; */
+    color: white;
+    width: 90%;
+    border-collapse: collapse;
+  }
+  #report table thead {
+    background-color: var(--main-color);
+  }
+  #report table th,
+  #report table td {
+    border: 2px solid #ffffff7d;
+  }
+  #report table tr td {
+    text-align: center;
+    font-size: medium;
+    padding: 5px;
+  }
+  #report table .table-description {
+    text-align: left;
+  }
+  #report tr:hover {
+    background-color: var(--table-hover);
+    cursor: default;
+  }
+  #chooseOne,
+  #chooseSpecfic {
+    /* background-color: blue; */
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1.5px solid white;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .first_filter,
+  .second_filter {
+    position: absolute;
+    background-color: #474545;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8px;
+    padding: 5px 10px;
+  }
+  .first_filter.active-filter,
+  .second_filter.active-filter {
+    display: block;
+  }
+  .filterOptions {
+    /* background-color: sienna; */
+    padding: 5px 8px;
+    border: 1px solid white;
+    margin-block: 0.2px;
+  }
+  .filterOptions * {
+    cursor: pointer;
+  }
+  .filterOptions:hover {
+    background-color: var(--table-hover);
+    cursor: pointer;
+  }
+  .filterOptions.checked {
+    background-color: var(--main-color);
+    font-size: medium;
+    font-weight: 700;
+  }
+  #report button {
+    color: white;
+    background-color: transparent;
+    margin-top: 5px;
+    width: 100%;
+    padding: 3px;
+    font-size: medium;
+    font-weight: 700;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+  }
+  .report-filter-button{
+    /* background-color: red; */
+    display: none;
+    justify-content: space-evenly;
+    width: 30%;
+  }
+  .search-button, .clear-button{
+    padding: 8px 10px;
+    color: white;
+    background-color: #ffffff44;
+    font-size: medium;
+    font-weight: 700;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #chooseOne:hover,
+  #chooseSpecfic:hover {
+    background-color: var(--main-color);
+  }
+  .button:hover, .button.active-button, .search-button:hover, .search-button.active{
+    background-color: var(--main-color) !important;
+  }  
+  .clear-button:hover{
+    background-color: tomato;
+  }

@@ -1,0 +1,25 @@
+:root{
+  --main-color:#6e52fbef;
+  --table-hover:#6e52fb8c;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style-type: none;
+  }
+  body {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+  }
+
+  .user-profile-image img{
+    border-radius: 50%;
+  }

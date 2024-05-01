@@ -1,0 +1,26 @@
+.add-transaction {
+  /* background-color: blue;  */
+  position: absolute;
+  display: none;
+  bottom: 5%;
+  right: 5%;
+  z-index: 10;
+  padding: 5px;
+  border-radius: 50px;
+}
+.add-transaction-button {
+  background-color: var(--main-color);
+  text-align: center;
+  padding: 20px;
+  border-radius: 50%;
+  width: 65px;
+  cursor: pointer;
+}
+.add-transaction-button span {
+  font-size: x-large;
+  font-weight: 900;
+}
+.add-transaction:hover .add-transaction-button {
+  background-color: transparent;
+  outline: 5px solid var(--main-color);
+}

@@ -1,0 +1,237 @@
+.main-home {
+  /* background-color: red; */
+  position: absolute;
+  display: flex;
+  top: 5%;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.home-first {
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80%;
+  width: 50%;
+  box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  border-radius: 8px;
+}
+.home-options{
+  background-color: #474545;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  margin-block: 3px;
+}
+.home-graph{
+  color: #ffffff;
+}
+.home-graph-title{
+  /* background-color: blue; */
+  text-align: center;
+  width: 80%;
+}
+.home-graph-title span{
+  font-size: x-large;
+  font-weight: 500;
+}
+.graph-hamburger{
+  /* background-color: red; */
+  text-align: center;
+  font-size: larger;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 8px;
+  cursor: pointer;
+}
+.optsGrph{
+  /* background-color: red; */
+  display: none;
+  position: absolute;
+  margin: 10px 5px 0 0;
+}
+.home-graph-option ul{
+  width: 8%;
+}
+.home-graph-option ul li {
+  /* background-color: brown; */
+  text-align: center;
+  font-size: medium;
+  font-weight: 700;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+.graph-hamburger:hover, .home-graph-option ul li:hover, .home-graph-option ul .active{
+  background-color: var(--main-color);
+}
+.home-graph{
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 90%;
+}
+.home-second {
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80%;
+  width: 40%;
+}
+.home-total,
+.home-recent {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 50%;
+  width: 80%;
+  margin: 10px;
+  box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  border-radius: 8px;
+}
+.home-total .home-overview {
+  /* background-color: green; */
+  text-align: center;
+  width: 60%;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+.home-overview span {
+  font-size: larger;
+  font-weight: 800;
+}
+.home-content {
+  /* background-color: yellow; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+}
+.home-income,
+.home-expense {
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: 10px;
+}
+.home-income .total-title,
+.home-expense .total-title {
+  background-color: var(--main-color);
+  text-align: center;
+  font-size: large;
+  font-weight: 500;
+  width: 50%;
+  padding: 5px;
+  border: 2px solid var(--main-color);
+}
+.home-income .total-value,
+.home-expense .total-value {
+  /* background-color: blue; */
+  text-indent: 10px;
+  text-align: center;
+  font-size: large;
+  font-weight: 500;
+  width: 50%;
+  padding: 5px;
+  background-color: none;
+  border: 2px solid white;
+}
+.home-period {
+  font-size: medium;
+  font-weight: 700;
+  margin-block: 10px;
+  cursor: pointer;
+}
+.home-period .period {
+  border-radius: 50px;
+  padding: 8px;
+  margin-inline: 4px;
+}
+.home-period .period.active,
+.home-period .period:hover {
+  background-color: var(--main-color);
+}
+.home-recent-title {
+  /* background-color: yellow; */
+  text-align: center;
+  width: 60%;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+.home-recent-title span {
+  font-size: larger;
+  font-weight: 800;
+}
+.home-transaction-value {
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 160px;
+}
+.transaction-values{
+  width: 100%;
+  height: 100%;
+}
+.home-transaction-value .transaction-value, .transaction-value-common {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 2px;
+  padding: 5px;
+}
+.transaction-value .text,.transaction-value-common .text {
+  width: 33%;
+  text-align: center;
+  font-weight: 700;
+}
+.transaction-value .c.text,
+.transaction-value .e.text,
+.transaction-value .b.text,
+.transaction-value-common .c.text,
+.transaction-value-common .e.text,
+.transaction-value-common .b.text {
+  /* background-color: red; */
+  font-size: medium;
+  font-weight: 400;
+}
+.transaction-value .e.text,
+.transaction-value-common .e.text {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.noData{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 100%;
+  /* text-align: center; */
+  font-size: medium;
+  font-weight: 700;
+  margin-top: 5px;
+  padding: 15px 3px 3px 3px;
+  border-top: 1px solid white;
+}

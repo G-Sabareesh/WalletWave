@@ -1,0 +1,161 @@
+.add-category-form{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .33);
+    z-index: 10;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+}
+.whole-category-form{
+    background-color: #474545;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  /* background-color: white; */
+    width: 40%;
+    padding: 3px;
+    border-radius: 5px;
+}
+.title-category-form{
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3px;
+    border-bottom: 1px solid white;
+}
+.category-form-title{
+    /* background-color: brown; */
+    text-indent: 10px;
+    font-size: large;
+    font-weight: 800; 
+    font-variant: small-caps;
+    padding: 5px;
+    width: 90%;
+    margin-right: 2.5px;
+}
+.category-form-close{
+    /* background-color: blue; */
+    text-align: center;
+    font-size: large;
+    font-weight: 800;
+    width: 10%;
+    margin-left: 2.5px;
+    cursor: pointer;
+}
+.category-form-close i{
+    padding: 7px;
+    border-radius: 50px;
+}
+.category-form-add{
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 5px;
+}
+.category-form-input{
+    width: 70%;
+    margin: 3px .5px 3px 0;
+}
+.add-category-form .category-form-input input{
+    text-indent: 10px;
+    font-size: large;
+    font-weight: 800;
+    margin: 2px 0;
+    padding: 3px;
+    width: 100%;
+}
+.add-category-form .category-form-input.error input{
+    /* background-color: blue !important; */
+    border: 1px solid red !important;
+}
+.category-form-button{
+    /* background-color: red; */
+    width: 20%;
+    margin: 3px 0 3px .5px;
+}
+.category-form-button input{
+    font-size: large;
+    font-weight: 600;
+    margin: 2px 0;
+    padding: 3px;
+    width: 100%;
+    cursor: pointer;
+}
+.category-form-content{
+    /* background-color: blue; */
+    width: 95%;
+    margin-block: 5px;
+}
+.category-main-name{
+    font-size: large;
+    font-weight: 700;
+    text-indent: 15px;
+    padding: 5px;
+    border-bottom: .5px solid white;
+}
+.category-sub-name{
+    font-size: medium;
+    font-weight: 500;
+    text-indent: 25px;
+    padding: 5px;
+}
+.category-sub-name li{
+    margin-block: 2px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.category-sub-name li:hover, .category-form-button input:hover{
+    background-color: var(--main-color) !important;
+}
+.category-form-close i:hover{
+    background-color: rgb(243, 62, 62);
+}
+
+.balance-calculate{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+.total-wallet, .total-bank{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    width: 50%;
+    margin-inline:2.5px;
+    padding: 3px;
+    border-radius: 5px;
+    border: .02px solid whitesmoke;
+}
+.totalTitle{
+    /* background-color: brown; */
+    font-size: large;
+    font-weight: 500;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    padding: 2px;
+}
+.totalValue{
+    /* background-color: blueviolet; */
+    font-size: large;
+    font-weight: 700;
+    display: inline-block;
+    width: 50%;
+    text-indent: 10px;
+    padding: 2px;
+    border-left: 1px dotted white;
+}

@@ -1,0 +1,187 @@
+/* the below style for about section */
+main #aboutus {
+    /* background-color: white; */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  #aboutus .whole-container {
+    /* background-color: green; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .aboutus-maincontainer{
+    /* background-color: violet; */
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-direction: row;
+     margin-top: 5%;
+     height: 80%;
+     width: 100%;
+     padding: 10px;
+  }
+  .aboutus-firstcontainer{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    height: 100%;
+    width: 45%;
+    padding: 10px;
+  }
+  .aboutus-firstcontainer .image{
+    /* background-color: green; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: fit-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    overflow-x: hidden;
+    padding: 10px;
+    border: 1px solid white;
+  }
+  .image img{
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);
+  }
+  .aboutus-secondcontainer{
+    /* background-color: green;  */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    height:fit-content;
+    width: 45%;
+  }
+  .aboutus-secondcontainer .contact-us{
+    /* background-color: violet; */
+    position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  height: 90%;
+  width: 90%;
+  padding: 10px;
+  box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  border-radius: 8px;
+  }
+  .aboutus-secondcontainer .contact-us .first-contact{
+    /* background-color: red; */
+    display: inline-flex;
+    width: 100%;
+  }
+  .aboutus-secondcontainer .contact-us .firstcontact{
+    /* background-color: yellow; */
+    width: 50%;
+  }
+  .aboutus-secondcontainer .contact-us .secondcontact{
+    /* background-color: green; */
+    border-left: 1px solid white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  .aboutus-secondcontainer .contact-us .secondcontact img{
+    width: 200px;
+  }
+  .aboutus-secondcontainer .contact-us-title{
+    /* background-color: red; */
+    padding: 10px;
+  }
+  .aboutus-secondcontainer .contact-us span{
+    font-size: larger;
+    font-weight: 600;
+  }
+  .aboutus-secondcontainer .contact-us .social-link{
+    display: inline-flex;
+    /* background-color: blue; */
+    height: fit-content;
+    width: fit-content;
+    margin-left: 25px;
+    padding: 2px;  
+    border: 2px solid white;
+  }
+  .aboutus-secondcontainer .contact-us .social-link .links{
+    /* background-color: yellow;s */
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .aboutus-secondcontainer .contact-us .social-link .links:hover{
+    background-color: var(--main-color);
+  }
+  .aboutus-secondcontainer .contact-us .social-link .links a{
+    color: white;
+  }
+  .aboutus-secondcontainer .contact-us .social-link .links a i{
+    font-size: larger;
+  }
+  .aboutus-secondcontainer .contact-us .team{
+    /* background-color: red ; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .aboutus-secondcontainer .contact-us .team .develop,
+  .aboutus-secondcontainer .contact-us .team .support{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 2px;
+  }
+  .team .title{
+    font-size: large;
+    font-weight: 500;
+  }
+  .team .name{
+  font-size: medium;
+  font-weight: 300;
+  margin-left: 10px;
+  padding: 2px;
+  }
+  .aboutus-secondcontainer .contact{
+    /* background-color: red; */
+    position: relative;
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .aboutus-copy{
+    /* background-color: violet; */
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     width: 100%;
+  }
+  .aboutus-copy .copyright{
+    /* background-color: red; */
+    padding: 10px;
+  }
+  .aboutus-copy .copyright span{
+    color: whitesmoke;
+    font-size: small;
+    font-weight: 700;
+  }

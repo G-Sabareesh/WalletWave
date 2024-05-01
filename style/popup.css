@@ -1,0 +1,46 @@
+.pop-up {
+  /* background-color: red; */
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 13%;
+  height: 10%;
+  width: 100%;
+  z-index: 11;
+}
+.pop-up.success,
+.pop-up.error {
+  display: flex;
+}
+.pop-up-message.success {
+  background-color: rgb(28, 184, 28);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 15%;
+  border-radius: 50px;
+}
+.pop-up-message.error {
+  background-color: rgb(184, 28, 28);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 15%;
+  border-radius: 50px;
+}
+.pop-up-message .i {
+  /* background-color: green; */
+  text-align: center;
+  font-size: larger;
+  padding: 10px 3px 10px 10px;
+}
+.pop-up-message .text-message {
+  /* background-color: green; */
+  text-align: center;
+  font-size: large;
+  font-weight: 500;
+  padding: 10px 10px 10px 3px;
+}

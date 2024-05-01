@@ -1,0 +1,214 @@
+main #signuplogin {
+    /* background-color: red; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow-y: hidden;
+    /* z-index: 99; */
+  }
+  .whole-container {
+    /* background-color: green; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  #signuplogin .whole-container .signup-container {
+    /* background-color: violet; */
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    height: 85%;
+    width: 100%;
+    padding: 10px;
+  }
+  #signuplogin .whole-container .login-container {
+    /* background-color: violet; */
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    height: 85%;
+    width: 100%;
+    padding: 10px;
+  }
+  .whole-container.active,#signuplogin .whole-container .signup-container.active,
+  #signuplogin .whole-container .login-container.active {
+    display: flex;
+  }
+  
+  .signup-container .title-container,
+  .login-container .title-container {
+    /* background-color: black; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 10px;
+  }
+  .signup-container .title-container span,
+  .login-container .title-container span {
+    /* background-color: var(--main-color); */
+    padding: 5px;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  .signup-container .main-container,
+  .login-container .main-container {
+    /* background-color: yellow; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 100%;
+    margin: 10px;
+  }
+  .main-container .first-container {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 50%;
+    padding: 15px;
+    box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+    border-radius: 5px;
+  }
+  .first-container .paragraph {
+    padding: 5px;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  .main-container .second-container {
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 30%;
+    padding: 10px;
+    box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+    border-radius: 5px;
+  }
+  .main-container .second-container .toggle-switch {
+    background-color: #363636;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 5px;
+    /* margin-block: 5px; */
+    border-radius: 25px;
+  }
+  .main-container .second-container .toggle-switch span {
+    font-size: medium;
+    font-weight: 500;
+    text-align: center;
+    /* background-color: violet; */
+  }
+  .main-container .second-container .toggle-switch .switch {
+    /* margin-inline: 20px; */
+    padding: 5px 8px;
+    border-radius: 50px;
+    /* background-color: violet; */
+    transition: background-color .5s ease-in-out;
+    cursor: pointer;
+  }
+  .main-container .second-container .toggle-switch .switch:hover {
+    background-color:  var(--main-color);
+  }
+  .main-container .second-container .toggle-switch .switch.active {
+    background-color: var(--main-color);
+  }
+  .main-container .second-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 100%; */
+  }
+  .main-container .second-container .userForm {
+    /* background-color: red; */
+    height: 100%;
+    width: 80%;
+    margin: 10px;
+  }
+  .main-container .second-container form .form-field {
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    padding: 5px;
+    width: 100%;
+  }
+  .main-container .second-container form .form-field input {
+    color: #363636;
+    padding: 8px;
+    text-indent: 5%;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 50px;
+    width: 80%;
+    outline: transparent;
+    border: transparent;
+  }
+  .main-container .second-container form .form-field input:active,
+  .main-container .second-container form .form-field input:focus {
+    outline: 3px solid var(--main-color);
+    outline-offset: 1.5px;
+  }
+  .main-container .second-container form .form-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 50%;
+  }
+  .main-container .second-container form .form-field button {
+    color: white;
+    padding: 5px;
+    text-indent: 5%;
+    text-align: center;
+    font-size: medium;
+    font-weight: 400;
+    width: 100%;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    border: none;
+    outline: 2px solid  var(--main-color);
+    outline-offset: 2px;
+    cursor: pointer;
+  }
+  .main-container .second-container form .form-field button:hover {
+    background-color:  var(--main-color);
+    outline: 0px;
+  }
+  
+  .main-container .second-container form .form-field button:hover {
+    scale: 1.1;
+  }
+  .user-form-input.required {
+    /* background-color: red; */
+    border: 3px solid  rgb(198, 41, 41) !important;
+  }
+  
+  .user-form-input.filled {
+    border: 3px solid rgb(35, 164, 35) !important;
+  }

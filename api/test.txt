@@ -1,0 +1,114 @@
+<?php
+// Include your database connection file or configure your database connection here
+include 'config.php'; // Example file name
+
+// Function to add multiple transactions
+function addTransactions($con, $transactionValues) {
+    foreach ($transactionValues as $transaction) {
+        // Extract transaction data
+        $user_id = $transaction['user_id'];
+        $date = $transaction['date'];
+        $transfer = $transaction['transfer'];
+        $category = $transaction['category'];
+        $sub_category = $transaction['sub_category'];
+        $mode = $transaction['mode'];
+        $description = $transaction['description'];
+        $amount = $transaction['amount'];
+    }
+    // Get the previous balance
+    $getPreviousBalanceQuery = "SELECT balance FROM transaction ORDER BY id DESC LIMIT 1";
+    $result = mysqli_query($con, $getPreviousBalanceQuery);
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $previous_balance = $row['balance'];
+    } else {
+        // No previous balance, set it to 0
+        $previous_balance = 0;
+    }
+
+    // Calculate new balance
+    // if (strtolower($transfer) === 'income') {
+    //     $newBalance = $previousBalance + $amount;
+    // } else if (strtolower($transfer) === 'expense') {
+    //     $newBalance = $previousBalance - $amount;
+    // }
+
+    // Insert the new transaction into the database
+    $insertTransactionQuery = "INSERT INTO transaction (user_id, tran_date, transfer_method, category, sub_category, mode, trans_description, amount, balance) 
+                                VALUES ('$user_id', '$date', '$transfer', '$category', '$sub_category', '$mode', '$description', $amount, $balance)";
+    if (mysqli_query($con, $insertTransactionQuery)) {
+        $data = array(
+            'success' => true,
+            'message' => "your transaction added successffully"
+        );
+    } else {
+        $data = array (
+            'success'=> false,
+            'message' => "Sorry something went wrong, Please try later..."
+        );
+    }
+}
+
+ $createTransactionTable = "CREATE TABLE IF NOT EXISTS transaction (
+        id INT(11) AUTO_INCREMENT PRIMARY KEY,
+        user_id VARCHAR(50),
+        tran_date VARCHAR(10),
+        transfer_method VARCHAR(20),
+        category VARCHAR(20),
+        sub_category VARCHAR(200),
+        mode VARCHAR(20),
+        trans_description VARCHAR(50),
+        amount INT,
+        balance INT
+    )";
+
+    // Execute query to create transaction table
+    if ($con->query($createTransactionTable) === TRUE) {
+        // Check if the request method is POST
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the JSON data sent from JavaScript
+    $json_data = file_get_contents('php://input');
+
+    // Decode the JSON data into an associative array
+    $transactionValues = json_decode($json_data, true);
+
+    // Call the addTransactions function
+    addTransactions($con, $transactionValues);
+// } else {
+//     echo "Invalid request method";
+// }
+    } else {
+        echo "Error creating table 'transaction': " . $con->error . "<br>";
+    }
+
+    echo json_encode($data);
+
+?>
+function getAllCategoriesSum($con) {
+    echo "call";
+    // Define the SQL query to get the sum of values for each main category
+    $get_query = "SELECT category, SUM(amount) AS total_amount 
+    FROM transaction 
+    GROUP BY category";
+
+// Execute the query
+$get_result = $con->query($get_query);
+echo "start";
+
+    // Check if the query was successful
+    if ($get_result) {
+    // Initialize an array to store the results
+    $categories = array();
+
+    // Fetch associative array of results
+    while ($get_row = $get_result->fetch_assoc()) {
+    // Store main category and total amount in the array
+    $categories[] = $get_row;
+    }
+
+    // Print the array of categories with their total amounts
+    print_r($categories);
+    } else {
+    // Handle query error
+    echo "Error: " . $con->error;
+    }

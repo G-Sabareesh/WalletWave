@@ -1,0 +1,171 @@
+main #settings {
+    /* display: flex; */
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.whole-settings {
+    /* background-color: green; */
+    position: relative;
+    width: 60%;
+    padding: 10px;
+    box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+    border-radius: 8px;
+}
+
+.settings-container-profile {
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    flex-direction: row;
+    padding: 10px;
+    margin-inline: 10px;
+    margin-block: 2.5px;
+}
+
+.settings-profile-image {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-inline: 10px;
+    border-right: 1px solid rgb(128, 116, 116);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.user-logo-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.setting-profile-change {
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: large;
+    width: 100%;
+    padding: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: .5px solid var(--main-color);
+}
+
+.settings-profile-image span {
+    text-align: center;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.settings-profile-image img {
+    /* position: relative; */
+    height: 165px;
+    width: 165px;
+    padding: 5px;
+}
+
+.settings-whole-title{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.settings-details{
+    /* background-color: green; */
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-bottom: 1px solid white;
+    border-radius: 4px;
+}
+
+.settings-profile-details {
+    /* background-color: pink; */
+    padding: 5px;
+}
+
+.settings-user-name {
+    font-size: larger;
+    font-weight: 600;
+    margin-block: 2px;
+}
+
+.settings-user-id {
+    font-size: large;
+    font-weight: 500;
+    text-indent: 5px;
+    margin-block: 2px;
+}
+
+.settings-container-others {
+    /* background-color: springgreen; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-inline: 10px;
+    margin-block: 2.5px;
+    box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+    border-radius: 8px;
+}
+
+.settings-whole-options{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 95%;
+    margin-block: 10px;
+}
+
+.setting-option{
+    background-color: #363636;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 45%;
+    border-radius: 5px;
+}
+.setting-option-title{
+    background-color: transparent;
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+    width: 80%;
+    padding: 8px;
+}
+.setting-option-link{
+    background-color: transparent;
+    text-align: center;
+    font-size: x-large;
+    width: 20%;
+    padding: 5px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.setting-profile-change:hover, .setting-option-link:hover {
+    background-color: var(--main-color);
+}

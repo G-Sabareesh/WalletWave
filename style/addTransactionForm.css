@@ -1,0 +1,343 @@
+#transaction-form {
+  /* background-color: none; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#transaction-form button,
+#transaction-form input,
+#transaction-form textarea {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+}
+.whole-transaction-form {
+  /* background-color: green; */
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  width: 95%;
+  padding: 5px;
+  margin-top: 5%;
+}
+.content-category-data {
+  /* background-color: red; */
+  position: relative;
+  height: 100%;
+  width: 30%;
+}
+.transactionForm-category {
+  /* background-color: blue; */
+  padding: 10px;
+}
+.transactionForm-category .transactionForm-category-list {
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px;
+  box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  border-radius: 8px;
+  height: 380px;
+  width: 100%;
+  overflow-y: scroll;
+}
+.transactionForm-category .addMainCategory {
+  background-color: transparent;
+  text-align: center;
+  font-size: medium;
+  font-weight: 500;
+  padding: 2px;
+  border: 1px solid var(--main-color);
+  margin: 8px 0;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+}
+.transactionForm-category .addMainCategory:hover{
+  background-color: var(--main-color);
+  border: 1px solid white;
+}
+.cat-main-title{
+  background-color: var(--main-color);
+  text-align: center;
+  font-size: larger;
+  font-weight: 700;
+  padding: 2px;
+  border: 1px solid white0;
+  margin: 5px 0;
+  border: 1px solid white;
+}
+ .cat-whole-lists{
+  /* background-color: red; */
+  padding: 5px;
+  width: 100%;
+}
+.cat-list-title{
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: large;
+  font-weight: 500;
+  padding: 2px;
+  border-bottom: 1px solid white;
+}
+.cat-list-title span{
+  /* background-color: pink; */
+  margin-inline: 10px;
+  padding: 8px;
+}
+.cat-plus{
+  font-size: larger;
+  border-radius: 10%;
+  cursor: pointer;
+}
+.cat-plus:hover{
+  background-color: var(--main-color);
+}
+.cat-list{
+  /* background-color: red; */
+  margin-top: 5px;
+}
+.cat-list li{
+  text-indent: 10%;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 5px;
+}
+.cat-list li:hover{
+   background-color: var(--main-color);
+}
+.content-transaction-form {
+  /* background-color: yellow; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 55%;
+  padding: 10px;
+  box-shadow: rgb(44, 44, 44) 0px 5px 15px;
+  border-radius: 8px;
+}
+.transactionFormtitle {
+  /* background-color: violet; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.transaction-title {
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70%;
+  padding: 10px;
+}
+.transaction-date {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 30%;
+  padding: 7px;
+  border: 3px solid white;
+}
+.transaction-title span,
+.transaction-date span {
+  font-size: larger;
+  font-weight: 800;
+}
+.transaction-form-main {
+  /* background-color: pink; */
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: .5fr 0.5fr 0.5fr;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 20px;
+  column-gap: 10px;
+  /* gap: 10px; */
+  height: fit-content;
+  grid-template-areas:
+    "CA IE MO"
+    "TD TD TB";
+}
+/* .common-dd {
+    /* background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  } */
+.income-expense {
+  /* background-color: black; */
+  grid-area: IE;
+}
+.category {
+  /* background-color: black; */
+  grid-area: CA;
+}
+.mode {
+  /* background-color: black; */
+  grid-area: MO;
+  padding: 0px;
+}
+.select-option {
+  /* background-color: green; */
+  height: 100%;
+  width: 100%;
+}
+.select-title {
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.select-title .dtitle {
+  /* background-color: red; */
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid white;
+}
+.select-title .dicon {
+  /* background-color: blue; */
+  text-align: center;
+  padding: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+.select-option-list {
+  /* background-color: yellow; */
+  display: none;
+}
+.active-drop {
+  position: relative;
+  display: flex;
+}
+.selection-options {
+  position: absolute;
+  background-color: #474545;
+  display: flex;
+  /* background-color: green; */
+  width: 100%;
+}
+.select-option-list ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* background-color: blue; */
+  width: 100%;
+}
+.select-option-list ul li {
+  /* background-color: brown; */
+  text-align: center;
+  padding: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.select-title .dicon:hover,
+.select-option-list ul li:hover {
+  background-color: var(--main-color);
+}
+.transaction-description {
+  /* background-color: green; */
+  grid-area: TD;
+  padding: 1px;
+}
+.transaction-description textarea {
+  resize: none;
+  font-size: large;
+  width: 100%;
+  text-indent: 10px;
+  padding-block: 8px;
+  color: whitesmoke;
+}
+.transaction-button {
+  /* background-color: yellow; */
+  grid-area: TB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  padding: 5px;
+}
+.transaction-button .transaction-submit,
+.transaction-button .transaction-clear {
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.transaction-button .transaction-submit:hover,
+.transaction-button .transaction-clear:hover{
+  background-color: var(--main-color);
+}
+.transaction-button .transaction-amount {
+  /* background-color: red; */
+  color: white;
+}
+.transaction-amount input {
+  padding: 6px;
+  font-size: large;
+  font-weight: 700;
+  text-indent: 10px;
+  width: 100%;
+}
+.transaction-button .transaction-submit button,
+.transaction-button .transaction-clear button {
+  /* background-color: red; */
+  border: 2px solid white;
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.transaction-button .transaction-submit button:hover,
+.transaction-button .transaction-clear button:hover {
+  background-color: var(--main-color);
+}
+.transaction-button button {
+  color: white;
+  font-size: large;
+  font-weight: 500;
+}
+/* ------------------------------ */
+/* for form category */
+.selection-options-data{
+  /* background-color: red; */
+  /* padding: 5px; */
+  height: 155px;
+  overflow-y: auto;
+}
+.selection-display-sub{
+  background-color: #474545;
+  /* display: none; */
+  position: absolute;
+  width: 100%;
+  left: 190px;
+}
+.sub-menu {
+  /* background-color: #008000; */
+  display: none;
+  /* position: absolute; */
+  /* top: 0; */
+}
+
+.selection-data:hover .sub-menu, .sub-menu:hover{
+  display: block;
+}
